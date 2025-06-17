@@ -1,80 +1,77 @@
-# README - Projeto de Aprendizado por Reforço com Q-Learning
+# README - Reinforcement Learning Project with Q-Learning
 
-## Visão Geral
+## Overview
 
-Este projeto implementa um algoritmo de Q-Learning para resolver um problema de decisão sequencial em um ambiente estocástico. O ambiente é representado por uma grade com 11 estados, onde o agente deve navegar desde um estado inicial (0) até um dos estados terminais (9 ou 10), que possuem recompensas de -1 e +1 respectivamente.
+This project implements a Q-Learning algorithm to solve a sequential decision-making problem in a stochastic environment. The environment is represented by a grid with 11 states, where the agent must navigate from an initial state (0) to one of the terminal states (9 or 10), which have rewards of -1 and +1, respectively.
 
-## Estrutura do Projeto
+![Alter text not available](imgs/problem.png)
 
-O código está organizado em um notebook Jupyter com as seguintes seções principais:
+## Project Structure
 
-1. **Matrizes de Transição**: Define as probabilidades de transição entre estados para cada ação possível (cima, baixo, esquerda, direita).
+The code is organized in a Jupyter notebook with the following main sections:
 
-2. **Funções Auxiliares**:
-   - `calc_action_result`: Simula transições estocásticas entre estados
-   - `choose_best_action`: Seleciona a ação com maior valor Q
-   - `q_update`: Implementa a regra de atualização do Q-Learning
-   - `simulate_policy`: Executa a política aprendida
-   - `print_policy`: Visualiza a política em formato de grade
+1. **Transition Matrices**: Defines the transition probabilities between states for each possible action (up, down, left, right).
 
-3. **Inicialização**: Configura os parâmetros do algoritmo e inicializa a Q-table.
+2. **Helper Functions**:
 
-4. **Aprendizado**: Executa o processo de treinamento do Q-Learning.
+   * `calc_action_result`: Simulates stochastic transitions between states
+   * `choose_best_action`: Selects the action with the highest Q-value
+   * `q_update`: Implements the Q-Learning update rule
+   * `simulate_policy`: Runs the learned policy
+   * `print_policy`: Displays the policy in a grid format
 
-5. **Simulação**: Testa a política aprendida.
+3. **Initialization**: Sets the algorithm parameters and initializes the Q-table.
 
-6. **Exercícios Propostos**:
-   - Item 1: Experimentos com diferentes valores de alpha e gamma
-   - Item 2: Implementação de estratégias de exploração alternativas
+4. **Learning**: Executes the Q-Learning training process.
 
-## Como Executar
+5. **Simulation**: Tests the learned policy.
 
-1. Certifique-se de ter instalado:
-   - Python 3.x
-   - Jupyter Notebook
-   - Bibliotecas: numpy, pandas, matplotlib
+## How to Run
 
-2. Execute o notebook no Jupyter ou em ambientes como Google Colab.
+1. Run the notebook in Jupyter or platforms like Google Colab.
 
-3. O código pode ser executado célula por célula ou todo de uma vez.
+2. The code can be executed cell by cell or all at once.
 
-## Parâmetros do Algoritmo
+## Algorithm Parameters
 
-- **Alpha (α)**: Taxa de aprendizado (0.2 no exemplo)
-- **Gamma (γ)**: Fator de desconto (0.5 no exemplo)
-- **Número de trajetórias**: 5000 no exemplo
-- **Recompensas**:
-  - Estados não-terminais: -0.04
-  - Estado terminal 9: -1
-  - Estado terminal 10: +1
+* **Alpha (α)**: Learning rate (0.2 in the example)
+* **Gamma (γ)**: Discount factor (0.5 in the example)
+* **Number of trajectories**: 5000 in the example
+* **Rewards**:
 
-## Resultados Esperados
+  * Non-terminal states: -0.04
+  * Terminal state 9: -1
+  * Terminal state 10: +1
 
-Ao executar o código, você verá:
+## Expected Results
 
-1. Uma visualização do ambiente (se a imagem estiver disponível)
-2. Verificação das matrizes de transição
-3. A Q-table final após o treinamento
-4. A política aprendida representada graficamente
-5. Contagem de visitas a cada par estado-ação
-6. Uma simulação da política aprendida
+When running the code, you will see:
 
-## Personalização
+1. A visualization of the environment (if the image is available)
+2. Verification of the transition matrices
+3. The final Q-table after training
+4. The learned policy displayed graphically
+5. Count of visits for each state-action pair
+6. A simulation of the learned policy
 
-Você pode modificar:
-- As matrizes de transição em `T`
-- As recompensas em `reward_vector`
-- Os parâmetros de aprendizado (ALPHA, GAMMA)
-- O número de trajetórias de treinamento
+## Customization
 
-## Contribuição
+You can modify:
 
-Contribuições são bem-vindas! Você pode:
-- Implementar os exercícios propostos
-- Adicionar novas visualizações
-- Melhorar a documentação
-- Propor extensões ao algoritmo
+* The transition matrices in `T`
+* The rewards in `reward_vector`
+* The learning parameters (ALPHA, GAMMA)
+* The number of training trajectories
 
-## Licença
+## Contribution
 
-Este projeto está disponível sob a licença MIT.
+Contributions are welcome! You can:
+
+* Implement proposed exercises
+* Add new visualizations
+* Improve the documentation
+* Propose algorithm extensions
+
+## License
+
+This project is licensed under the MIT License.
