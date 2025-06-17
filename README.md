@@ -1,4 +1,4 @@
-# README - Reinforcement Learning Project with Q-Learning
+# Reinforcement Learning Project with Q-Learning
 
 ## Overview
 
