@@ -11,14 +11,28 @@ Original file is located at
 
 try:
     import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt 
+    import matplotlib.image as mpimg
 except ImportError:
     import os
-    os.system('pip install numpy pandas')
+    os.system('pip install numpy pandas matplotlib')
     import numpy as np
     import pandas as pd
+    import matplotlib.pyplot as plt
+    import matplotlib.image as mpimg
+
+img = mpimg.imread('../imgs/problem.png')
+plt.imshow(img)
+plt.axis('off')
+plt.show()
+
+# Can use this under approach in a notebook environment.
+# from IPython.display import Image
+# Image("../imgs/problem.png")
 
 from IPython.display import Image
-Image("problem.png")
+Image("imgs/problem.png")
 
 # Create empty transition matrices for each action
 T = {
@@ -360,7 +374,7 @@ for state, reward in TERMINAL_STATES.items():
 """**APRENDIZADO**"""
 
 # Number of trajectories for environment exploration
-num_trajectories = 5000
+num_trajectories = 50
 
 for i in range(num_trajectories):
     state = 0
@@ -396,6 +410,7 @@ print(pd.DataFrame(q_table, columns=ACTION_NAMES))
 # Display the policy derived from the Q-table
 print_policy(q_table, ACTION_NAMES)
 
+print("\nCounts for state-action pairs:")
 print(pd.DataFrame(visit_counts, columns=ACTION_NAMES))
 
 """**SIMULANDO A POLÍTICA APRENDIDA**"""
