@@ -63,15 +63,6 @@ You can modify:
 * The learning parameters (ALPHA, GAMMA)
 * The number of training trajectories
 
-## Contribution
-
-Contributions are welcome! You can:
-
-* Implement proposed exercises
-* Add new visualizations
-* Improve the documentation
-* Propose algorithm extensions
-
 ## License
 
 This project is licensed under the MIT License.
